@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import user from './Profile/user.json';
 import data from './Statistic/data.json';
 import friends from './FriendList/friends.json';
@@ -29,3 +30,12 @@ export const App = () => {
     </>
   )
 };
+
+FriendList.propTypes = {
+    friends: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        avatar: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        isOnline: PropTypes.bool.isRequired
+    }))
+}
