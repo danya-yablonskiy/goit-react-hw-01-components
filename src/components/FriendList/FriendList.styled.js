@@ -25,13 +25,6 @@ width: 10px;
 height: 10px;
 background-color: ${({ isOnline }) => { 
     return isOnline? 'green' : 'red'
-    // switch (isOnline) { 
-    //     case 'true':
-    //         return colorState.colors.green;
-    //     case 'false':
-    //         return colorState.colors.red;
-    //     default:
-    //         return '#fff'
     }
 }}
 `
